@@ -9,14 +9,31 @@
             width: 700px;
             margin: 0px auto;
         }
+        legend {
+            font-weight: bolder;
+            font-size: 14pt;
+        }
+        label {
+            font-weight: bold;
+        }
         .myform {
             width: 300px;
+        }
+        #mid, #pwd {
+            background-color: beige;
         }
         #myform1 {
             float: left;
         }
         #myform2 {
             float: right;
+        }
+        .btn {
+            padding: 8px;
+            font-weight: bold;
+            background-color: paleturquoise;
+            cursor: pointer;
+            text-shadow: 2px 2px 2px grey;
         }
     </style>
 </head>
@@ -34,8 +51,12 @@
                     <input type="password" name="pwd" id="pwd" />
                 </p>
                 <p>
+                    <!--
                     <input type="submit" value="전송" class="btn" />
                     <input type="reset" value="다시입력" class="btn" />
+                    -->
+                    <button type="submit" class="btn">전송</button>
+                    <button type="reset" class="btn">다시입력</button>
                 </p>
             </fieldset>
         </form>
