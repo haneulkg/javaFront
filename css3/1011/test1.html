@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test1.html</title>
+    <style>
+        .container {
+            line-height: 27pt;
+        }
+        .title {
+            font-weight: bold;
+            background-color: burlywood;
+        }
+        input[type="text"] {
+            color: black;
+            background-color: cornflowerblue;
+            font-size: 13pt;
+            padding: 40px 30px 10px 20px; /* 위, 오른, 아래, 왼  | 위아래 , 오른왼 */
+            margin: 10px;
+        }
+        input[type="password"] {
+            color: brown;
+            background-color: bisque;
+            font-size: 13pt;
+            padding: 7px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Form태그와 css</h2>
+    <form>
+        <div class="container">
+            <div id="gid">
+                <label for="mid" class="title">아이디</label>
+                <input type="text" name="mid" id="mid" size="15"  placeholder="아이디를 입력하세요" autofocus />
+            </div>
+            <div id="gpwd">
+                <label for="pwd" class="title">비밀번호</label>
+                <input type="password" name="pwd" id="pwd" size="17" placeholder="비밀번호를 입력하세요" />
+            </div>
+            <div id="gage">
+                <label for="age" class="title">나이</label>
+                <input type="number" name="age" id="age" placeholder="나이를 입력하세요" value="20" min="1" max="99" maxlength="2" style="width: 70px;" />
+            </div>
+            <div id="gaddress">
+                <label for="address" class="title">주소</label>
+                <input type="text" name="address" id="address" placeholder="주소를 입력하세요" size="30" />
+            </div>
+            <div>
+                <input type="submit" value="전송" />
+                <input type="reset" value="다시입력" />
+            </div>
+        </div>
+    </form>
+</body>
+</html>
