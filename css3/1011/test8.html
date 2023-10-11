@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test8.html</title>
+    <style>
+        h2 {
+            color: gray;
+        }
+        .dd {
+            background-color: rgba(231, 137, 231, 0.733);
+            font-weight: bolder;
+            color: rgba(0, 0, 0, 0.747);
+        }
+        table {
+            width: 400px;
+            /* height: 300px; */
+            border-collapse: collapse; /* 간격 없애기 */
+        }
+        th, td {
+            border: 1px solid gray;
+            text-align: center;
+            padding: 20px;
+            color: grey;
+        }
+        thead {
+            background-color: rgba(243, 243, 125, 0.808);
+        }
+        tfoot {
+            background-color: rgba(173, 216, 230, 0.849);
+        }
+        tbody {
+            background-color: rgba(255, 192, 203, 0.849);
+        }
+    </style>
+</head>
+<body>
+    <h2>표 연습</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>1</th>
+                <th class="dd">2</th>
+                <th>3</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>4</td>
+                <td class="dd">5</td>
+                <td>6</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td class="dd">8</td>
+                <td>9</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>10</td>
+                <td class="dd">11</td>
+                <td>12</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>
