@@ -60,11 +60,19 @@ console.log("arr3 : ", arr3);
 
 // 정렬하기 : 문자형식으로 정렬(오름차순) - sort()
 let res3 = arr3.sort();
-console.log("res3 : ", res3);
+console.log("res문자형식 : ", res3);
 
-// 정렬하기 : 문자형식으로 정렬(내림차순) - reverse()
+// 정렬하기 : 숫자형식으로 정렬(오름차순) - sort((a,b) => a-b)
+res3 = arr3.sort((a,b) => a-b);
+console.log("res3 오름차순 : ", res3);
+
+// 정렬하기 : 숫자형식으로 정렬(내림차순) - sort((a,b) => b-a)
+res3 = arr3.sort((a,b) => b-a);
+console.log("res3 내림차순 : ", res3);
+
+// 정렬하기 : 배열의 자료를 역순으로 출력 - reverse()
 let res4 = arr3.reverse();
-console.log("res4 : ", res4);
+console.log("res4역순 : ", res4);
 
 console.log("arr3 : ", arr3);
 arr3.forEach((data,idx) => console.log(data, " : ", idx));

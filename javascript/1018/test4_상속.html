@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test4_상속.html</title>
+    <script src="test4.js"></script>
+    <script>
+        'use strict';
+
+        let member = new Member("김말숙",19,"흑색");
+        console.log("member : ", member);
+        
+        member.name = "김바다";
+        member.age = -23;
+        member.color = "보라";
+        console.log("member : ", member);
+        
+        // 상속 : extends
+        class ChildMember extends Member {}
+        
+        let childMemmber = new ChildMember("박기쁨", 34, "초록");
+        // childMemmber.name = "박기쁨";
+        // childMemmber.age = 34;
+        // childMemmber.color = "초록";
+        console.log("childMember : ", childMemmber);
+
+    </script>
+</head>
+<body>
+    <h2>상속 연습</h2>
+</body>
+</html>

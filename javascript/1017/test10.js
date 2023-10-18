@@ -25,8 +25,14 @@ num = Math.abs(su2);
 num = Math.sqrt(16);
 
 num = su3.toFixed(1);  // 매개변수로 지정된 소수이하 자리수까지 출력시켜줌 (반올림 처리함)
-num = su5.toFixed(0);
+// num = su5.toFixed(0);
 
-num = Math.round(su3); 
+// num = Math.round(su3); 
+
+num = Math.random();   // 난수 : 0 ~ 1사이의 실수형 난수발생
+num = Math.random()*10;
+num = parseInt(Math.random()*10);
+num = parseInt(Math.random()*10)+1;
+num = parseInt(Math.random()*(14-5+1))+5;     // 5~14까지의 난수
 
 demo.innerHTML = num;

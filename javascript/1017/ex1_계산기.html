@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex1_계산기.html</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        .number {
+            border: 2px solid gray;
+            text-align: center;
+            font-size: 12pt;
+            font-weight: bold;
+            background-color: lightgray;
+            width: 60px;
+            height: 40px;
+            margin-top: 5px;
+            margin-right: 5px;
+            padding-top: 5px;
+        }
+    </style>
+    <script>
+        'use strict';
+        function num0() {
+            calc.innerHTML += 0;
+        }
+        function num1() {
+            calc.innerHTML += 1;
+        }
+        function num2() {
+            calc.innerHTML += 2;
+        }
+        function num3() {
+            calc.innerHTML += 3;
+        }
+        function num4() {
+            calc.innerHTML += 4;
+        }
+        function num5() {
+            calc.innerHTML += 5;
+        }
+        function num6() {
+            calc.innerHTML += 6;
+        }
+        function num7() {
+            calc.innerHTML += 7;
+        }
+        function num8() {
+            calc.innerHTML += 8;
+        }
+        function num9() {
+            calc.innerHTML += 9;
+        }
+        function plus() {
+            calc.innerHTML += "+";            
+        }
+        function minus() {
+            calc.innerHTML += "-";            
+        }
+        function mul() {
+            calc.innerHTML += "*";            
+        }
+        function div() {
+            calc.innerHTML += "/";            
+        }
+        function point() {
+            calc.innerHTML += ".";            
+        }
+        function reset() {
+            calc.innerHTML = "";
+        }
+        function result() {
+            calc.innerHTML = eval(calc.innerHTML);     
+        }
+    </script>        
+</head>
+<body>
+    <p><br/></p>
+    <div class="container">
+    <h2>계산기</h2>
+    <div id="calc" value="" style="border:2px solid gray; width: 272px; height: 40px; background-color: beige;"></div>
+    <span type="button" class="number" value="7" onclick="num7()">7</span>
+    <span type="button" class="number" value="8" onclick="num8()">8</span>
+    <span type="button" class="number" value="9" onclick="num9()">9</span>
+    <span type="button" class="number" onclick="reset()" style="background-color: mistyrose;">C</span><br/>
+    <span type="button" class="number" value="4" onclick="num4()">4</span>
+    <span type="button" class="number" value="5" onclick="num5()">5</span>
+    <span type="button" class="number" value="6" onclick="num6()">6</span>
+    <span type="button" class="number" onclick="point()" style="background-color: mistyrose;">.</span><br/>
+    <span type="button" class="number" value="1" onclick="num1()">1</span>
+    <span type="button" class="number" value="2" onclick="num2()">2</span>
+    <span type="button" class="number" value="3" onclick="num3()">3</span>
+    <span type="button" class="number" onclick="plus()" style="background-color: mistyrose;">+</span><br/>
+    <span type="button" class="number" value="0" onclick="num0()">0</span>
+    <span type="button" class="number" onclick="minus()" style="background-color: mistyrose;">-</span>
+    <span type="button" class="number" onclick="mul()" style="background-color: mistyrose;">*</span>
+    <span type="button" class="number" onclick="div()" style="background-color: mistyrose;">/</span><br/>
+    <span type="button" class="number" onclick="result()" style="border: 2px solid gray; width: 272px; height: 40px; background-color: lightcyan;">=</span>
+    </div>
+    <div id="demo"></div>
+</body>
+</html>
