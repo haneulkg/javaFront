@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test01_JSON.html</title>
+    <script>
+        'use strict';
+        /*
+            JSON변환방식 : parse(), stringify()
+            1. Object(자바스크립트 객체)를 JSON형식의 문자열로 바꿀시 - JSON.stringify() 사용
+            2. JSON형식의 문자열을 Object(자바스크립트 객체)형식으로 바꿀시 - JSON.parse() 사용
+        */
+
+        //  1. Object to JSON (JSON형식으로 바꾸기)
+        let json = JSON.stringify(true); // 논리형은 같음
+        console.log(json);
+        console.log("------------------------");
+        
+        json = JSON.stringify(['사과','배','banana','200']); // 배열은 같음
+        console.log(json);
+        console.log("------------------------");
+        
+        // Javascript의 객체
+        const member = {
+            name : '홍길동',
+            age : 25,
+            color : 'red',
+            gender : true,
+            birthday : new Date(),
+            // atom : function() {
+                //     console.log("성명 : ", member.name);
+                // }
+                atom : () => console.log("성명 : ", member.name)
+            }
+            console.log(member);
+            console.log("name : ", member.name);
+            console.log("gender : ", member.gender);
+            console.log("birthday : ", member.birthday);
+            console.log("birthday : ", member.birthday.getDate());
+            console.log("atom() : ", member.atom);
+            console.log("atom() : ", member.atom());    // undefined
+            console.log("------------------------");
+
+        // Javascript객체를 JSON문자열포멧으로 변환
+        json = JSON.stringify(member);
+        console.log(json);
+        console.log(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
+        
+        json = JSON.stringify(member,(key, value) => {
+            // return key, value;
+            return key == 'name'?'관리자':value;
+        });
+        console.log(json);
+
+        console.log(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
+
+        // 2. JSON to Object : parse()
+        let obj = JSON.parse(json);
+        console.log(obj);
+        console.log(obj.birthday);
+        // console.log(obj.birthday.getDate());
+        
+        let obj2 = JSON.parse(json, (key, value) => {
+            // return key, value;
+            return key == 'birthday'? new Date(value) : value;
+        });
+        console.log(obj2);
+        console.log(obj2.birthday.getDate());
+    </script>
+</head>
+<body>
+    <h2>JSON(Javascript Object Notation)</h2>
+    <div>(서버와 클라이언트간의 자료 전달방식 : XML, JSON)</div>
+    <pre style="background-color: beige;">
+        모바일(웹)에서의 서버와 데이터 전송방식에서 사용
+        프로그램의 종류나 플랫폼에 상관없이 사용가능 (ex - Java, C, C++, Python, PHP, 코틀린, GO언어 ...)
+        자바스크립트 객체와 같이, "키(key) : 값(value)"으로 구성
+        처리방식 : Object를 String으로 직렬화(serialize)처리하여 전송, 
+                다시 사용할시 JSON문서형식을 Javascript Object형식으로 변환 후 사용가능
+    </pre>
+</body>
+</html>
