@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>고양이 관련 이야기</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script>
+        'use strict';
+        let windowName = 'newWindow';
+        let winX = 1000;
+        let winY = 700;
+        let x = (window.screen.width/2) - (winX/2);
+        let y = (window.screen.height/2) - (winY/2);        
+        let opt =  `width=${winX}, height=${winY}, left=${x}, top=${y}`;
+ 
+        function kind1 () {
+            let url = "https://search.naver.com/search.naver?where=nexearch&sm=tab_etc&mra=bjFH&x_csa=%7B%22theme%22%3A%22pet%22%2C%20%22pkid%22%3A%22605%22%7D&pkid=605&os=13842668&qvt=0&query=%EB%85%B8%EB%A5%B4%EC%9B%A8%EC%9D%B4%EC%88%B2%EA%B3%A0%EC%96%91%EC%9D%B4";
+ 
+            window.open(url, windowName, opt)
+        }
+        function kind2 () {
+            let url = "https://search.naver.com/search.naver?where=nexearch&sm=tab_etc&mra=bjFH&x_csa=%7B%22theme%22%3A%22pet%22%2C%20%22pkid%22%3A%22605%22%7D&pkid=605&os=13842673&qvt=0&query=%EB%9E%99%EB%8F%8C";
+ 
+            window.open(url, windowName, opt)
+        }
+        function kind3 () {
+            let url = "https://search.naver.com/search.naver?where=nexearch&sm=tab_etc&mra=bjFH&x_csa=%7B%22theme%22%3A%22pet%22%2C%20%22pkid%22%3A%22605%22%7D&pkid=605&os=13842676&qvt=0&query=%EB%A8%BC%EC%B9%98%ED%82%A8";
+ 
+            window.open(url, windowName, opt)
+        }
+        function kind4 () {
+            let url = "https://search.naver.com/search.naver?where=nexearch&sm=tab_etc&mra=bjFH&x_csa=%7B%22theme%22%3A%22pet%22%2C%20%22pkid%22%3A%22605%22%7D&pkid=605&os=13842683&qvt=0&query=%EB%B8%8C%EB%A6%AC%ED%8B%B0%EC%8B%9C%EC%87%BC%ED%8A%B8%ED%97%A4%EC%96%B4";
+ 
+            window.open(url, windowName, opt)
+        }
+        function kind5 () {
+            let url = "https://search.naver.com/search.naver?where=nexearch&sm=tab_etc&mra=bjFH&x_csa=%7B%22theme%22%3A%22pet%22%2C%20%22pkid%22%3A%22605%22%7D&pkid=605&os=13842686&qvt=0&query=%EC%83%B4(%EC%83%A4%EB%AF%B8%EC%A6%88)";
+ 
+            window.open(url, windowName, opt)
+        }
+        function kind6 () {
+            let url = "https://search.naver.com/search.naver?where=nexearch&sm=tab_etc&mra=bjFH&x_csa=%7B%22theme%22%3A%22pet%22%2C%20%22pkid%22%3A%22605%22%7D&pkid=605&os=13842691&qvt=0&query=%EC%8A%A4%EC%BD%94%ED%8B%B0%EC%8B%9C%ED%8F%B4%EB%93%9C";
+ 
+            window.open(url, windowName, opt)
+        }
+        function kind7 () {
+            let url = "https://search.naver.com/search.naver?where=nexearch&sm=tab_etc&mra=bjFH&x_csa=%7B%22theme%22%3A%22pet%22%2C%20%22pkid%22%3A%22605%22%7D&pkid=605&os=13842705&qvt=0&query=%EC%95%84%EB%B9%84%EC%8B%9C%EB%8B%88%EC%95%88";
+ 
+            window.open(url, windowName, opt)
+        }
+        function kind8 () {
+            let url = "https://search.naver.com/search.naver?where=nexearch&sm=tab_etc&mra=bjFH&x_csa=%7B%22theme%22%3A%22pet%22%2C%20%22pkid%22%3A%22605%22%7D&pkid=605&os=13842722&qvt=0&query=%EC%BD%94%EB%A6%AC%EC%95%88%EC%87%BC%ED%8A%B8%ED%97%A4%EC%96%B4";
+ 
+            window.open(url, windowName, opt)
+        }
+        let sw1 = 0;
+        let sw2 = 0;
+        let sw3 = 0;
+        let sw4 = 0;
+        let sw5 = 0;
+        let sw6 = 0;
+        let sw7 = 0;
+        let sw8 = 0;
+ 
+        function img1() {
+            if(sw1 == 0) {
+                document.getElementById("img1").src = "../../images/ex1.png";
+                sw1++;
+            }
+            else {
+                document.getElementById("img1").src = "../../images/발바닥1.png";
+                sw1--;
+            }
+        }
+        function img2() {
+            if(sw2 == 0) {
+                document.getElementById("img2").src = "../../images/ex2.png";
+                sw2++;
+            }
+            else {
+                document.getElementById("img2").src = "../../images/발바닥1.png";
+                sw2--;
+            }
+        }
+        function img3() {
+            if(sw3 == 0) {
+                document.getElementById("img3").src = "../../images/ex3.png";
+                sw3++;
+            }
+            else {
+                document.getElementById("img3").src = "../../images/발바닥1.png";
+                sw3--;
+            }
+        }
+        function img4() {
+            if(sw4 == 0) {
+                document.getElementById("img4").src = "../../images/ex4.png";
+                sw4++;
+            }
+            else {
+                document.getElementById("img4").src = "../../images/발바닥1.png";
+                sw4--;
+            }
+        }
+        function img5() {
+            if(sw5 == 0) {
+                document.getElementById("img5").src = "../../images/ex5.png";
+                sw5++;
+            }
+            else {
+                document.getElementById("img5").src = "../../images/발바닥1.png";
+                sw5--;
+            }
+        }
+        function img6() {
+            if(sw6 == 0) {
+                document.getElementById("img6").src = "../../images/ex6.png";
+                sw6++;
+            }
+            else {
+                document.getElementById("img6").src = "../../images/발바닥1.png";
+                sw6--;
+            }
+        }
+        function img7() {
+            if(sw7 == 0) {
+                document.getElementById("img7").src = "../../images/ex7.png";
+                sw7++;
+            }
+            else {
+                document.getElementById("img7").src = "../../images/발바닥1.png";
+                sw7--;
+            }
+        }
+        function img8() {
+            if(sw8 == 0) {
+                document.getElementById("img8").src = "../../images/ex8.png";
+                sw8++;
+            }
+            else {
+                document.getElementById("img8").src = "../../images/발바닥1.png";
+                sw8--;
+            }
+        }
+    </script>
+</head>
+<body>
+ 
+<!-- Top - 제목 -->
+<div class="w3-top">
+    <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+    <a href="#home" class="w3-bar-item w3-button"><b>고양이</b> 관련 이야기</a>
+    <!-- Top - 작은 제목  -->
+    <div class="w3-right w3-hide-small">
+        <a href="#projects" class="w3-bar-item w3-button" style="background-color: beige;">고양이 사진모음 </a>
+        <a href="#kind" class="w3-bar-item w3-button" style="background-color: rgb(216, 239, 247);">묘종 </a>
+        <a href="#contact" class="w3-bar-item w3-button" style="background-color: rgb(248, 226, 230);">고양이에 관해</a>
+    </div>
+    </div>
+</div>
+ 
+<!-- 크기 지정 -->
+    <div class="w3-content w3-padding" style="max-width:1564px">
+ 
+<!-- 고양이 사진모음 -->
+    <div class="w3-container w3-padding-32" id="projects">
+        <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16" style="background-color: beige;">고양이 사진모음</h3>
+        <p style="font-size: 15pt;">고양이 발바닥 그림을 <b>'click'</b>하면 고양이 사진이 보입니다.</p>
+    </div>
+    <div class="w3-row-padding">
+    <div class="w3-col l3 m6 w3-margin-bottom">
+    <div class="w3-display-container"> 
+            <img src="../../images/발바닥1.png" id="img1" xxonclick="img1()" height="300px" alt="House" style="width: 100%;"/>
+    </div>
+</div>
+<div class="w3-col l3 m6 w3-margin-bottom">
+    <div class="w3-display-container">
+        <img src="../../images/발바닥1.png" id="img2" xxonclick="img2()" height="300px" alt="House" style="width: 100%;"/>
+    </div>
+</div>
+<div class="w3-col l3 m6 w3-margin-bottom">
+    <div class="w3-display-container">
+        <img src="../../images/발바닥1.png" id="img3" xxonclick="img3()" height="300px" alt="House" style="width: 100%;"/>
+    </div>
+</div>
+<div class="w3-col l3 m6 w3-margin-bottom">
+    <div class="w3-display-container">
+        <img src="../../images/발바닥1.png" id="img4" xxonclick="img4()" height="300px" alt="House" style="width: 100%;"/>
+    </div>
+    </div>
+</div>
+ 
+<div class="w3-row-padding">
+    <div class="w3-col l3 m6 w3-margin-bottom">
+    <div class="w3-display-container">
+        <img src="../../images/발바닥1.png" id="img5" xxonclick="img5()" height="300px" alt="House" style="width:99%"/>
+    </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+    <div class="w3-display-container">
+        <img src="../../images/발바닥1.png" id="img6" xxonclick="img6()" height="300px" alt="House" style="width:99%"/>
+    </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+    <div class="w3-display-container">
+        <img src="../../images/발바닥1.png" id="img7" xxonclick="img7()" height="300px" alt="House" style="width:99%"/>
+    </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+    <div class="w3-display-container">
+        <img src="../../images/발바닥1.png" id="img8" xxonclick="img8()" height="300px" alt="House" style="width:99%"/>
+    </div>
+    </div>
+</div>
+ 
+<!-- 묘종 -->
+<div class="w3-container w3-padding-32" id="kind">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16" style="background-color: rgb(216, 239, 247);">묘종</h3>
+    <p style="font-size: 15pt;"><b>묘종이란 ▶</b> 고양이의 품종을 뜻한다.</p>
+</div>
+ 
+<div class="w3-row-padding">
+    <div class="w3-col l3 m6 w3-margin-bottom">
+        <img src="../../images/노르웨이숲고양이 .png" alt="John" style="width:100%">
+        <h3>노르웨이숲 고양이</h3>
+        <p><b>⇣</b> '노르웨이숲 관련 지식'을 누르면 노르웨이숲에 관련된 내용을 네이버에서 볼 수 있습니다.</p>
+        <p><button class="w3-button w3-light-grey w3-block" xxonclick="kind1()">노르웨이숲 관련 지식</button></p>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+        <img src="../../images/랙돌.png" alt="Jane" style="width:100%">
+        <h3>랙돌</h3>
+        <p><b>⇣</b> '랙돌 관련 지식'을 누르면 랙돌에 관련된 내용을 네이버에서 볼 수 있습니다.</p>
+        <p><button class="w3-button w3-light-grey w3-block" xxonclick="kind2()">랙돌 관련 지식</button></p>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+        <img src="../../images/먼치킨.png" alt="Mike" style="width:100%">
+        <h3>먼치킨</h3>
+        <p><b>⇣</b> '먼치킨 관련 지식'을 누르면 먼치킨에 관련된 내용을 네이버에서 볼 수 있습니다.</p>
+        <p><button class="w3-button w3-light-grey w3-block" xxonclick="kind3()">먼치킨 관련 지식</button></p>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+        <img src="../../images/브리티시쇼트헤어.png" alt="Dan" style="width:100%">
+        <h3>브리티시쇼트헤어</h3>
+        <p><b>⇣</b> '브리티시쇼트헤어 관련 지식'을 누르면 브리티시쇼트헤어에 관련된 내용을 네이버에서 볼 수 있습니다.</p>
+        <p><button class="w3-button w3-light-grey w3-block" xxonclick="kind4()">브리티시쇼트헤어 관련 지식</button></p>
+    </div>
+</div>
+<div class="w3-row-padding">
+    <div class="w3-col l3 m6 w3-margin-bottom">
+        <img src="../../images/샴(샤미즈).png" alt="John" style="width:100%">
+        <h3>샴(샤미즈)</h3>
+        <p><b>⇣</b> '샴(샤미즈) 관련 지식'을 누르면 샴(샤미즈)에 관련된 내용을 네이버에서 볼 수 있습니다.</p>
+        <p><button class="w3-button w3-light-grey w3-block" xxonclick="kind5()">샴(샤미즈) 관련 지식</button></p>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+        <img src="../../images/스코티시폴드.png" alt="Jane" style="width:100%">
+        <h3>스코티시폴드</h3>
+        <p><b>⇣</b> '스코티시폴드 관련 지식'을 누르면 스코티시폴드에 관련된 내용을 네이버에서 볼 수 있습니다.</p>
+        <p><button class="w3-button w3-light-grey w3-block" xxonclick="kind6()">스코티시폴드 관련 지식</button></p>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+        <img src="../../images/아비시니안.png" alt="Mike" style="width:100%">
+        <h3>아비시니안</h3>
+        <p><b>⇣</b> '아비시니안 관련 지식'을 누르면 아비시니안에 관련된 내용을 네이버에서 볼 수 있습니다.</p>
+        <p><button class="w3-button w3-light-grey w3-block" xxonclick="kind7()">아비시니안 관련 지식</button></p>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+        <img src="../../images/코리안쇼트헤어.png" alt="Dan" style="width:100%">
+        <h3>코리안쇼트헤어</h3>
+        <p><b>⇣</b> '코리안쇼트헤어 관련 지식'을 누르면 코리안쇼트헤어에 관련된 내용을 네이버에서 볼 수 있습니다.</p>
+        <p><button class="w3-button w3-light-grey w3-block" xxonclick="kind8()">코리안쇼트헤어 관련 지식</button></p>
+    </div>
+</div>
+ 
+<!-- 콤보박스 -->
+<div class="w3-container w3-padding-32" id="contact">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16" style="background-color: rgb(248, 226, 230);">고양이에 관해</h3>
+    <form>
+        <div style="font-size: 15pt;">고양이 나이</div>
+        <div>
+            <select class="form-control">
+                <option>고양이 나이 : 사람 나이</option>
+                <option>고양이 나이 계산 방법 : 4 ⨯ 나이 + 16</option>
+                <option>2개월 ⇿ 3세</option>
+                <option>3개월 ⇿ 5세</option>
+                <option>6개월 ⇿ 9세</option>
+                <option>1살 ⇿ 17세</option>
+                <option>2살 ⇿ 23세</option>
+                <option>3살 ⇿ 28세</option>
+                <option>4살 ⇿ 32세</option>
+                <option>5살 ⇿ 36세</option>
+                <option>6살 ⇿ 40세</option>
+                <option>7살 ⇿ 44세</option>
+                <option>8살 ⇿ 48세</option>
+            </select>
+        </div>
+        <div style="font-size: 15pt;">고양이가 싫어하는 것</div>
+        <select class="form-control">
+            <option>1. 갑작스러운 움직임</option>
+            <option>2. 시끄러운 소리</option>
+            <option>3. 환경의 변화</option>
+            <option>4. 억지로 안기</option>
+            <option>5. 귀찮게 하기</option>
+            <option>6. 배 만지기</option>
+            <option>7. 향이 진한 냄새</option>
+            <option>8. 더러운 화장실</option>
+            <option>9. 무관심, 외로움</option>
+            <option>10. 물 (목욕)</option>
+        </select>
+    </form>
+</div>
+</div>
+ 
+ 
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-16">
+    <p>2023-10-22</p>
+</footer>
+ 
+</body>
+</html>
