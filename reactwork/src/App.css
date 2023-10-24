@@ -1,0 +1,14 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  background-color: rgb(191, 232, 250);
+}
+.App {
+  width: 600px;
+  margin: 0 auto;
+  height: 800px;
+  background-color: rgb(236, 220, 194);
+}
+.title {
+  text-align: center;
+}

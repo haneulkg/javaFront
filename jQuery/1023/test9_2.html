@@ -41,7 +41,8 @@
                 arr.push('샌드🐕');
                 // alert("샌 도착완료😊")
             });
-            function rank() {
+
+            $('#btn').click(function() {
                 if(arr.length == 3) {
                     for(let i=0; i<arr.length; i++) {
                         str += `${i+1}등 : ${arr[i]}<br/>`;
@@ -49,8 +50,9 @@
                     }
                     $('#demo').html(str);
                     console.log(str);
-                }
-            };
+                };
+            });
+
         });
 
     </script>        
@@ -58,13 +60,15 @@
 <body>
     <p><br/></p>
     <div class="container">
-        <h3>달리기 시합</h3>
-        <div id="atom1">해피</div>
-        <div id="atom2">초코</div>
-        <div id="atom3">샌드</div>
+        <h3>달리기 시합
+        <input type="button" id="btn" value="순위보기" class="btn btn-success"/></h3>
+        <div id="atom1">해피🐕‍🦺</div>
+        <div id="atom2">초코🐩</div>
+        <div id="atom3">샌드🐕</div>
         <hr/>
         <div id="demo">
-            순위 : 
+            달리기 시합이 종료된 후 순위보기 버튼을 누르면
+            순위가 표시됩니다
         </div>
     </div>
 </body>

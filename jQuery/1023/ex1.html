@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>test8.html</title>
+    <title>ex1.html</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
     <!-- <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -19,20 +19,58 @@
     </style>
     <script>
         'use strict';
+ 
+        let today = new Date();
+        let year = today.getFullYear();
+        let month = today.getMonth();
+        let date = today.getDate();
+ 
         let cnt = 0;
-
+ 
         $(function() {
+            let firstDate = 0;
+            let lastDate = 0;
+ 
+            let ymd = `${year}-${month+1}-${date}`;
+            $('#demo').html(`오늘 날짜 : ${ymd}`);
+            
             $('td').click(function() {
                 if($(this).hasClass('bgColor') == true) {
                     $(this).removeClass('bgColor');
                     cnt--;
                 }
                 else {
-                    $(this).addClass('bgColor');
-                    cnt++;
+                    let cellText = eval($(this).text());
+                    if(cellText < date) alert("오늘 이전일은 선택할 수 없습니다.");
+                    else {                  
+                        $(this).addClass('bgColor');
+                        cnt++;
+                    }
+                    if(cnt==1) {
+                        firstDate = eval($(this).text());
+                        console.log(firstDate);
+                    } 
+                    else if(cnt==2) {
+                        cnt = 0;
+                        lastDate = eval($(this).text());
+                        console.log(lastDate);
+                        let temp=0;
+                        if(firstDate > lastDate) {
+                            // console.log(lastDate+"last");
+                            temp = firstDate;
+                            // console.log(temp+"temp");
+                            firstDate = lastDate;
+                            // console.log(firstDate+"first");
+                            lastDate = temp;
+                            console.log("f"+firstDate);
+                            console.log("L"+lastDate);
+                        }
+                    }
+                    $('#demo').html(`선택된 날짜 : ${firstDate} ~ ${lastDate}`);
+                    for(let i=firstDate; i<lastDate; i++) {
+                        $('tr td').eq(i).addClass('bgColor');
+                    }
                 }
-                console.log($(this).text());
-                $('#demo').html(`현제 선택된 셀의 개수 : <font color='red'><b>${cnt}</b></font>`);
             });
         });
     </script>        
@@ -40,7 +78,8 @@
 <body>
     <p><br/></p>
     <div class="container">
-        <h3>표의 내용을 클릭하시면 선택/취소 됩니다.</h3>
+        <h3>아래의 날짜에서 첫번째와 마지막 날짜를 클릭하면 자동으로 날짜범위가 체크됩니다..</h3>
+        <p style="color: gray;">* 오늘 날짜 이전은 선택하실 수 없습니다 *</p>
         <table class="table table-bordered text-center">
             <tr>
                 <td class="tdCell">1</td>
