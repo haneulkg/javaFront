@@ -1,14 +1,43 @@
-body {
+* {
   margin: 0px;
   padding: 0px;
-  background-color: rgb(191, 232, 250);
+}
+body {
+  background-color: whitesmoke;
 }
 .App {
   width: 600px;
   margin: 0 auto;
   height: 800px;
-  background-color: rgb(236, 220, 194);
+  background-color: rgb(204, 202, 202);
 }
 .title {
   text-align: center;
+  background-color: beige;
+}
+.header {
+  text-align: center;
+  background-color: pink;
+  height: 100px;
+  line-height: 100px;
+}
+.home, .comp1, .comp2, .comp3 {
+  text-align: center;
+  background-color: rgb(226, 203, 235);
+  height: 600px;
+}
+.home {
+  line-height: 100px;
+}
+.footer {
+  text-align: center;
+  height: 100px;
+  background-color: rgb(167, 240, 197);
+  line-height: 100px;
+}
+a {
+  text-decoration: none;
+  margin: 5px;
+  color: rgb(93, 93, 184);
+  font-weight: bold;
 }
